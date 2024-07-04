@@ -2,7 +2,7 @@ import Canvas from "./Canvas";
 const DrawingPannel = () => {
   return (
     <>
-      <div>
+      <div className="w-full h-screen">
         <Canvas />
       </div>
     </>
