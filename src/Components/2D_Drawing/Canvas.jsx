@@ -15,26 +15,8 @@ const Canvas = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "900px",
-          height: "600px",
-          position: "relative",
-        }}
-      >
-        <ReactSketchCanvas
-          ref={canvasRef}
-          strokeColor={color}
-          strokeWidth={width}
-          canvasColor="black"
-          hideGrid
-          width="100%"
-          height="100%"
-        />
-      </div>
-      <div className="mt-4 flex space-x-4">
+    <div className="flex justify-around md:flex-row flex-col gap-8 items-center">
+      <div className="mt-4 flex flex-col  gap-4">
         <button
           onClick={handleClear}
           className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
@@ -67,6 +49,24 @@ const Canvas = () => {
             className="w-24"
           />
         </label>
+      </div>
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "900px",
+          height: "600px",
+          position: "relative",
+        }}
+      >
+        <ReactSketchCanvas
+          ref={canvasRef}
+          strokeColor={color}
+          strokeWidth={width}
+          canvasColor="black"
+          hideGrid
+          width="100%"
+          height="100%"
+        />
       </div>
     </div>
   );
